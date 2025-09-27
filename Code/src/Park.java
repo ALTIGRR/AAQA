@@ -9,7 +9,7 @@ public class Park {
             this.price = price;
         }
         public void getValues() {
-            System.out.println("Название: " + name + ", Время работы: " + worktime +  ", Цена билета: " + price);
+            System.out.println("Название: " + name + ", Время работы: " + worktime +  ", Цена билета: " + price + " RUB");
         }
     }
 }
