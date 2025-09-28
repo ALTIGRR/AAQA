@@ -12,7 +12,8 @@ public class Product {
         this.price = price;
         this.booking_status = booking_status;
     }
+
     public void getValues() {
-        System.out.println("Название: " + name + ", Дата производства: " + release_date +  ", Производитель: " + company + ", Страна производства: " + country +  ", Цена: " + price + " RUB" + ", Статус бронирования: " + booking_status);
+        System.out.println("Название: " + name + ", Дата производства: " + release_date + ", Производитель: " + company + ", Страна производства: " + country + ", Цена: " + price + " RUB" + ", Статус бронирования: " + booking_status);
     }
 }
