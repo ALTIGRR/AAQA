@@ -1,6 +1,9 @@
 public class Product {
 
-    private String name, release_date, company, country;
+    private String name;
+    private String release_date;
+    private String company;
+    private String country;
     private int price;
     private boolean booking_status;
 
@@ -13,7 +16,7 @@ public class Product {
         this.booking_status = booking_status;
     }
 
-    public void getValues() {
+    public void prinInfo() {
         System.out.println("Название: " + name + ", Дата производства: " + release_date + ", Производитель: " + company + ", Страна производства: " + country + ", Цена: " + price + " RUB" + ", Статус бронирования: " + booking_status);
     }
 }

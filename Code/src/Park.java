@@ -1,8 +1,8 @@
 public class Park {
-    private Attraction attraction;
 
     public class Attraction {
-        private String name, worktime;
+        private String name;
+        private String worktime;
         private int price;
 
         public Attraction(String name, String worktime, int price) {
@@ -11,7 +11,7 @@ public class Park {
             this.price = price;
         }
 
-        public void getValues() {
+        public void prinInfo() {
             System.out.println("Название: " + name + ", Время работы: " + worktime + ", Цена билета: " + price + " RUB");
         }
     }
