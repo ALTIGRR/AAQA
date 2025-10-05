@@ -1,10 +1,8 @@
 public class Dog extends Animal {
-    protected static int countDog = 0;
-    private int runDog, swimDog;
+    private static int countDog = 0;
 
     public Dog(int runLength, int swimLength) {
-        this.runDog = runLength;
-        this.swimDog = swimLength;
+        super(runLength, swimLength);
         countDog++;
     }
 
@@ -13,16 +11,16 @@ public class Dog extends Animal {
     }
 
     public void isRunning() {
-        if (this.runDog <= 500) {
-            System.out.println(" пробежал " + runDog + "м");
+        if (this.runLength <= 500) {
+            System.out.println(" пробежал " + runLength + "м");
         } else {
             System.out.println(" не пробежал дистанцию");
         }
     }
 
     public void isSwiming() {
-        if (this.swimDog <= 10) {
-            System.out.println(" проплыл " + swimDog + "м");
+        if (this.swimLength <= 10) {
+            System.out.println(" проплыл " + swimLength + "м");
         } else {
             System.out.println(" не сможет проплыть дистанцию");
         }

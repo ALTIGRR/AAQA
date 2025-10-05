@@ -1,15 +1,15 @@
 public class CreateAnimal {
     public static void main(String[] args) {
         System.out.println("Коты:");
-        Cat boris = new Cat(150, 1, 15);
+        Cat boris = new Cat(150, 15);
         System.out.print("1.Борис");
         boris.isRunning();
         boris.isSwiming();
-        Cat snowy = new Cat(200, 3, 3);
+        Cat snowy = new Cat(200, 3);
         System.out.print("2.Снежок");
         snowy.isRunning();
         snowy.isSwiming();
-        Cat kuro = new Cat(210, 0, 4);
+        Cat kuro = new Cat(210, 4);
         System.out.print("3.Черныш");
         kuro.isRunning();
         kuro.isSwiming();
@@ -19,12 +19,15 @@ public class CreateAnimal {
         cats[2] = kuro;
         System.out.println("Коты хотят поесть");
         Misca catMisc = new Misca(13);
+        Misca catMisc1 = new Misca(20);
         catMisc.foodAmount();
         for (Cat cat : cats) {
-            cat.tryToEat();
+            cat.tryToEat(catMisc);
         }
         catMisc.moreFood();
-        boris.tryToEat();
+        boris.tryToEat(catMisc1);
+        catMisc1.foodAmount();
+        catMisc1.moreFood();
         System.out.println("Собаки:");
         Dog havski = new Dog(300, 10);
         System.out.print("1.Хавски");

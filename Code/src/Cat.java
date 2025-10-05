@@ -1,11 +1,10 @@
 public class Cat extends Animal {
-    protected static int countCat = 0;
-    private int runCat;
+    private static int countCat = 0;
     private int needEat;
     private boolean notHungry = false;
 
-    public Cat(int runLength, int swimLength, int needEat) {
-        this.runCat = runLength;
+    public Cat(int runLength, int needEat) {
+        super(runLength, 0);
         this.needEat = needEat;
         countCat++;
     }
@@ -15,8 +14,8 @@ public class Cat extends Animal {
     }
 
     public void isRunning() {
-        if (this.runCat <= 200) {
-            System.out.println(" пробежал " + runCat + "м");
+        if (this.runLength <= 200) {
+            System.out.println(" пробежал " + runLength + "м");
         } else {
             System.out.println(" не пробежал дистанцию");
         }
@@ -26,13 +25,12 @@ public class Cat extends Animal {
         System.out.println("  Коты не умеют плавать");
     }
 
-    public void tryToEat() {
-        int food = Misca.food;
-        if (food >= needEat) {
-            Misca.food = food - needEat;
+    public void tryToEat(Misca misca) {
+        if (misca.getFood() >= needEat) {
+            misca.setFood(misca.getFood() - needEat);
             notHungry = true;
             System.out.println("Кот поел, сытость: " + notHungry);
-        } else if (food < needEat) {
+        } else {
             notHungry = false;
             System.out.println("Коту мало еды, сытость: " + notHungry);
         }

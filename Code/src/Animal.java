@@ -1,13 +1,11 @@
-public class Animal {
+public abstract class Animal {
     protected static int countAnimals = 0;
-    protected int runLength, swimLength;
+    protected int runLength;
+    protected int swimLength;
 
     public Animal(int runLength, int swimLength) {
         this.runLength = runLength;
         this.swimLength = swimLength;
-    }
-
-    public Animal() {
         countAnimals++;
     }
 
