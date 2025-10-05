@@ -1,5 +1,5 @@
 public abstract class Animal {
-    protected static int countAnimals = 0;
+    private static int countAnimals = 0;
     protected int runLength;
     protected int swimLength;
 
