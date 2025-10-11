@@ -14,16 +14,15 @@ public class Collections {
         for (Student student : students) {
             System.out.println(student.getAvg());
         }
-        Student.missedStudent(students);
+        ManagerStudy.missedStudent(students);
         System.out.println("После отчислений:");
         for (Student student : students) {
             System.out.println(student);
         }
-        for (Student student : students) {
-            System.out.println(student.nextCourse());
-        }
-        Student.printStudents(students, 3);
-        Student.printStudents(students, 4);
-        Student.printStudents(students, 5);
+        ManagerStudy.nextCourse(students);
+        System.out.println("Перешли на следующий курс: \n" + students);
+        ManagerStudy.printStudents(students, 3);
+        ManagerStudy.printStudents(students, 4);
+        ManagerStudy.printStudents(students, 5);
     }
 }
