@@ -1,21 +1,22 @@
 public class Exceptions {
     public static void main(String[] args) {
+        String[][] fxf = new String[][]{
+                {"1", "1", "4", "5"},
+                {"5", "3", "11", "13"},
+                {"1", "5", "7", "3"},
+                {"10", "4", "2", "7"}
+        };
         try {
-            String[][] fxf = new String[][]{
-                    {"1", "1", "4", "5"},
-                    {"5", "3", "11", "13"},
-                    {"1", "5", "7", "3"},
-                    {"10", "4", "2", "7"}
-            };
-            doubleMassive(fxf);
-            System.out.println("Массив соответствует требованиям.");
             int result = doubleMassive(fxf);
+            System.out.println("Массив соответствует требованиям.");
             System.out.println("Сумма = " + result);
             System.out.println(fxf[1][3]);
+            System.out.println(fxf[4][0]);
         } catch (MyArraySizeException | MyArrayDataException e) {
             System.out.println("Ошибка: " + e.getMessage());
         } catch (ArrayIndexOutOfBoundsException e) {
-            System.out.println("Произошёл Out Of Bounds, размер массива меньше, чем элемент вызываемый по индексу");
+            System.out.println("Ошибка:");
+            System.out.println(e.getMessage() + ". Произошёл Out Of Bounds, размер массива меньше, чем элемент вызываемый по индексу.\nДопустимые индексы строк и столбцов: от 0 до 3х");
         }
     }
 
