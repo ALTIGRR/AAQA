@@ -3,12 +3,12 @@ import org.junit.jupiter.api.Test;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
-public class TestGet {
+public class TestGet extends ConfigurationTest {
     @Test
     public void whenGet_thenStatus200() {
         given().log().body()
                 .contentType("application/json")
-                .when().get("https://postman-echo.com/get?foo1=bar1&foo2=bar2")
+                .when().get("get?foo1=bar1&foo2=bar2")
                 .then().log().body().statusCode(200)
                 .and()
                 .body("args.foo1", equalTo("bar1"))
