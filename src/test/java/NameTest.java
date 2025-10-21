@@ -1,3 +1,4 @@
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
@@ -5,8 +6,6 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-
-import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class NameTest {
     WebDriver driver;
@@ -25,10 +24,11 @@ public class NameTest {
     void teardown() {
         driver.quit();
     }
+
     @Test
-    void testName(){
+    void testName() {
         driver.get("https://www.mts.by/");
-        driver.findElement(By.xpath("//*[contains(text(), 'Онлайн пополнение ')]"));
-        driver.findElement(By.xpath("//*[contains(., 'без комиссии')]"));
+        driver.findElement(By.xpath("//*[contains(text(), 'Онлайн пополнение ')]")).isDisplayed();
+        driver.findElement(By.xpath("//*[contains(., 'без комиссии')]")).isDisplayed();
     }
 }
