@@ -1,5 +1,5 @@
 public class Equal {
-    public String equals(int x, int z) {
+    public static String equals(int x, int z) {
         if (x == z) {
             System.out.println("Числа равны");
             return "x == z";
