@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class DZ2 {
+public class Methods {
     public static void main(String[] args) {
         printThreeWords();
         checkSumSign();
