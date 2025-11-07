@@ -2,6 +2,6 @@ import io.restassured.RestAssured;
 
 public class ConfigurationTest {
     static {
-        RestAssured.baseURI = "https://postman-echo.com";
+        RestAssured.baseURI = "https://petstore.swagger.io/v2/";
     }
 }
