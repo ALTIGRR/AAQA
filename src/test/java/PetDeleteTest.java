@@ -4,7 +4,7 @@ import static io.restassured.RestAssured.given;
 
 public class PetDeleteTest extends ConfigurationTest {
     @Test
-    public void whenDelete_thenStatus200() {
+    public void testDeletePet() {
         given().log().body()
                 .contentType("application/json")
                 .pathParam("petId", 1)
